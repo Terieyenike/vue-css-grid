@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Grid Layout</title>
+    <link rel="stylesheet" href="./bulma.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section class="img-container">
+        <div class="inner-container" v-for="grid in gridLayout">
+          <img :src="grid.img" alt="" class="img" />
+          <div class="card">
+            <p class="card_category">
+              {{grid.category}}
+            </p>
+            <p class="card-title">
+              {{grid.content}}
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer class="author">
+        <div class="social">
+             <p>{{author}}</p>
+          <div class="social-media">
+              <p>Follow me here</p>
+            <a class="social__links" :href="twitter" target="_blank">Twitter</a>
+            <a class="social__links" :href="github" target="_blank">Github</a>
+            <a class="social__links" :href="linkedin" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </foo>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      let gridLayout = [
+        {
+          category: 'Travel',
+          content: 'Lost in the city is where I found myself',
+          img:
+            'https://images.pexels.com/photos/2740906/pexels-photo-2740906.jpeg'
+        },
+        {
+          category: 'Guide',
+          content: 'Guide to Iceland',
+          img:
+            'https://images.pexels.com/photos/356831/pexels-photo-356831.jpeg'
+        },
+        {
+          category: 'Journal',
+          content: 'A lost city on the rolling hills',
+          img:
+            'https://images.pexels.com/photos/953182/pexels-photo-953182.jpeg'
+        },
+        {
+          category: 'Guide',
+          content: 'Top 10 things to consider when travelling',
+          img:
+            'https://images.pexels.com/photos/831056/pexels-photo-831056.jpeg'
+        },
+        {
+          category: 'Travel',
+          content: 'Lost in the city is where I found myself',
+          img:
+            'https://images.pexels.com/photos/831058/pexels-photo-831058.jpeg'
+        },
+        {
+          category: 'Travel',
+          content: 'Lost in the city is where I found myself',
+          img:
+            'https://images.pexels.com/photos/1009136/pexels-photo-1009136.jpeg'
+        },
+        {
+          category: 'Travel',
+          content: 'Lost in the city is where I found myself',
+          img:
+            'https://images.pexels.com/photos/2743752/pexels-photo-2743752.jpeg'
+        },
+        {
+          category: 'Travel',
+          content: 'Lost in the city is where I found myself',
+          img:
+            'https://images.pexels.com/photos/356831/pexels-photo-356831.jpeg'
+        },
+        {
+          category: 'Travel',
+          content: 'Lost in the city is where I found myself',
+          img:
+            'https://images.pexels.com/photos/2728260/pexels-photo-2728260.jpeg'
+        }
+      ];
+      const app = new Vue({
+        el: '#app',
+        data() {
+          return {
+            gridLayout: gridLayout,
+            author: 'Teri Eyenike',
+            twitter: 'https://twitter.com/codeg0d',
+            github: 'https://github.com/terieyenike',
+            linkedin: 'https://linkedin.com/in/terieyenike'
+          };
+        }
+      });
+    </script>
+  </body>
+</html>
