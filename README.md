@@ -18,3 +18,5 @@ You need to have basic understanding of HTML, CSS, and a knowledge of Vue.JS to 
 # Author
 
 Oteri Eyenike
+
+[View Project](https://terieyenike.github.io/vue-css-grid/)
